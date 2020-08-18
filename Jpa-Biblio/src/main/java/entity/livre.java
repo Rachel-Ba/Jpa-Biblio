@@ -2,6 +2,8 @@ package entity;
 
 import static org.junit.Assert.*;
 
+import java.util.List;
+
 import javax.persistence.*;
 
 
@@ -19,6 +21,9 @@ public class livre
 	
 	@Column(name = "AUTEUR", length = 50, nullable = false)
 	private String auteur;
+	
+	@OneToMany(mappedBy = "compo")
+    private List<compo> compo;
 	
 	public livre()
 	{

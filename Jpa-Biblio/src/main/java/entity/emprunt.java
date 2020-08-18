@@ -2,6 +2,8 @@ package entity;
 
 import static org.junit.Assert.*;
 
+import java.util.List;
+
 import javax.persistence.*;
 
 
@@ -27,6 +29,9 @@ public class emprunt
 	
 	@Column(name = "ID_CLIENT", length = 10, nullable = false)
 	private Integer id_client;
+	
+	@OneToMany(mappedBy = "compo")
+    private List<compo> compo;
 	
 	public emprunt()
 	{

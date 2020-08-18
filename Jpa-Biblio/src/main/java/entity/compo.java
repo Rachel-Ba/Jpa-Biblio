@@ -22,6 +22,14 @@ public class compo
 	@Column(name = "ID_EM", length = 10, nullable = false)
 	private Integer id_emp;
 	
+	@ManyToOne
+    @JoinColumn(name = "ID_LIV")
+    private livre livre;
+	
+	@ManyToOne
+    @JoinColumn(name = "ID_EM")
+    private emprunt emprunt;
+	
 	public compo()
 	{
 		
