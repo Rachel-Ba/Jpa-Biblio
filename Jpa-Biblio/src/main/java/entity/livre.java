@@ -3,6 +3,7 @@ package entity;
 import static org.junit.Assert.*;
 
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.*;
 
@@ -22,8 +23,11 @@ public class livre
 	@Column(name = "AUTEUR", length = 50, nullable = false)
 	private String auteur;
 	
-	@OneToMany(mappedBy = "compo")
-    private List<compo> compo;
+	@ManyToMany
+    @JoinTable (name="compo",
+    			joinColumns=@JoinColumn(name="ID_LIV"),
+    			inverseJoinColumns=@JoinColumn(name="ID_EMP"))
+	private Set<emprunt> emprunt;
 	
 	public livre()
 	{
