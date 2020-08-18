@@ -31,9 +31,8 @@ public class emprunt
 	@Column(name = "ID_CLIENT", length = 10, nullable = false)
 	private Integer id_client;
 	
-	@ManyToOne
-	@JoinColumn(name="ID_CLIENT")
-	private client client;
+/*	@OneToMany(mappedBy="emprunt")
+	private Set<client> client;*/
 	
 	@ManyToMany
     @JoinTable (name="compo",

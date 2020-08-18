@@ -24,8 +24,10 @@ public class client
 	@Column(name = "PRENOM", length = 50, nullable = false)
 	private String prenom;
 	
-	@OneToMany(mappedBy = "client")
-    private List<emprunt> emprunt;
+	   
+ /*   @ManyToOne
+    @JoinColumn(name="ID_CLIENT")
+    private emprunt emprunt;*/
 	
 	public client()
 	{

@@ -19,16 +19,16 @@ public class compo
 	@Column(name = "ID_LIV", length = 10, nullable = false)
 	private Integer id_liv;
 	
-	@Column(name = "ID_EM", length = 10, nullable = false)
+	@Column(name = "ID_EMP", length = 10, nullable = false)
 	private Integer id_emp;
 	
-	@ManyToOne
+	/*@ManyToOne
     @JoinColumn(name = "ID_LIV")
     private livre livre;
 	
 	@ManyToOne
-    @JoinColumn(name = "ID_EM")
-    private emprunt emprunt;
+    @JoinColumn(name = "ID_EMP")
+    private emprunt emprunt;*/
 	
 	public compo()
 	{
