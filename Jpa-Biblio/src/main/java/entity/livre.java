@@ -17,6 +17,19 @@ public class livre
 	@Id
 	private Integer id;
 	
+	@Embedded
+	private auteur auteurEmbedd;
+	
+	public auteur getAuteurEmbedd()
+	{
+		return auteurEmbedd;
+	}
+	
+	public void setAuteurEmbedd(auteur auteur)
+	{
+		this.auteurEmbedd = auteur;
+	}
+	
 	@Column(name = "TITRE", length = 255, nullable = false)
 	private String titre;
 	

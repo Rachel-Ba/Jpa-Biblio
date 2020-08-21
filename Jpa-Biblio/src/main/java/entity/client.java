@@ -25,7 +25,7 @@ public class client
 	private String prenom;
 	
 	   
- /*   @ManyToOne
+ /* @ManyToOne
     @JoinColumn(name="ID_CLIENT")
     private emprunt emprunt;*/
 	
